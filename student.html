@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../jquery-3.3.1.min.js"></script>
+<script src="https://54.210.209.126:443/socket.io/socket.io.js"></script>
+<script src="adapter-latest.js"></script>    
+<script src="mainStudent2.js"></script>
+</head>
+<body>
+<table style="width: 100%;" id="rooms-list"></table>
+<video id="localVideo" playsinline autoplay></video><br>
+<button id="max">Max</button>
+<button id="cancel">Cancel</button>
+WebRTC-Scalable-Broadcast-master
+        
+
+        
+<script>
+    $("#cancel").click(function(){
+        var room = document.getElementById("room");  
+        window.localStorage.room = 0;      
+        window.location.href = "index.html";
+        
+    });
+    document.getElementById('max').addEventListener('click', onOpenScreen);
+    var elem = document.getElementById('localVideo');
+    /* View in fullscreen */
+	function onOpenScreen() {
+	  if (elem.requestFullscreen) {
+	    elem.requestFullscreen();
+	  } else if (elem.mozRequestFullScreen) { /* Firefox */
+	    elem.mozRequestFullScreen();
+	  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+	    elem.webkitRequestFullscreen();
+	  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+	    elem.msRequestFullscreen();
+	  }
+	}
+</script>
+</body>
+</html>

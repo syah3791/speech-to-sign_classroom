@@ -1,0 +1,10 @@
+{
+  "name": "WebRTC",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "node-static": "~0.7.1",
+    "socket.io": "~2.2.0",
+    "express": "~3.4.0"
+  }
+}
